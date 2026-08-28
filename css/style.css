@@ -21,3 +21,28 @@ nav a {
     margin: 15px;
     border-radius: 10px;
 }
+.screen {
+    background: white;
+    color: black;
+    text-align: center;
+    padding: 8px;
+    margin: 20px auto;
+    max-width: 400px;
+}
+
+.seats {
+    display: grid;
+    grid-template-columns: repeat(6, 50px);
+    gap: 10px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.seats button {
+    background: #555;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
