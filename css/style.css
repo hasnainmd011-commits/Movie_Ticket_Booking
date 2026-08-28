@@ -46,3 +46,6 @@ nav a {
     border-radius: 5px;
     cursor: pointer;
 }
+.seats button.selected {
+    background: green;
+}
