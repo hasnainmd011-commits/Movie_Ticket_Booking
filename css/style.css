@@ -49,3 +49,19 @@ nav a {
 .seats button.selected {
     background: green;
 }
+@media (max-width: 600px) {
+
+    body {
+        padding: 15px;
+    }
+
+    .seats {
+        grid-template-columns: repeat(3, 50px);
+    }
+
+    nav a {
+        display: block;
+        margin: 5px 0;
+    }
+
+}

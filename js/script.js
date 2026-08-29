@@ -47,3 +47,18 @@ if (search) {
 
     });
 }
+
+let form = document.querySelector("form");
+
+if (form) {
+    form.addEventListener("submit", function(event) {
+
+        let name = document.querySelector("input[name='name']");
+
+        if (name && name.value.length < 3) {
+            alert("Please enter your full name.");
+            event.preventDefault();
+        }
+
+    });
+}
