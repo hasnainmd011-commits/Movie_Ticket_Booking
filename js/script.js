@@ -1,43 +1,20 @@
-let seats = document.querySelectorAll(".seats button");
-let selected = document.querySelector(".selected-seats");
-let price = document.querySelector(".total-price");
+document.addEventListener("DOMContentLoaded", function() {
 
-let ticketPrice = 300;
-
-seats.forEach(function(seat) {
-
-    seat.addEventListener("click", function() {
-
-        seat.classList.toggle("selected");
-
-        let chosen = document.querySelectorAll(".seats .selected");
-        let names = [];
-
-        chosen.forEach(function(item) {
-            names.push(item.innerText);
-        });
-
-        selected.innerText = names.length == 0
-            ? "Selected seats: None"
-            : "Selected seats: " + names.join(", ");
-
-        price.innerText = "Total Price: Tk " + (names.length * ticketPrice);
-    });
-
-});
-
-let search = document.querySelector("#search");
+```
+let search = document.getElementById("search");
 
 if (search) {
+
     search.addEventListener("keyup", function() {
 
-        let movies = document.querySelectorAll(".movie");
+        let text = search.value.toLowerCase();
+        let movies = document.querySelectorAll(".movie-card");
 
         movies.forEach(function(movie) {
 
             let title = movie.querySelector("h3").innerText.toLowerCase();
 
-            if (title.includes(search.value.toLowerCase())) {
+            if (title.includes(text)) {
                 movie.style.display = "block";
             } else {
                 movie.style.display = "none";
@@ -46,19 +23,38 @@ if (search) {
         });
 
     });
+
 }
 
-let form = document.querySelector("form");
 
-if (form) {
-    form.addEventListener("submit", function(event) {
+let seats = document.querySelectorAll(".seats button");
+let seatInput = document.getElementById("selectedSeats");
+let total = document.getElementById("total");
 
-        let name = document.querySelector("input[name='name']");
+seats.forEach(function(seat) {
 
-        if (name && name.value.length < 3) {
-            alert("Please enter your full name.");
-            event.preventDefault();
+    seat.addEventListener("click", function() {
+
+        seat.classList.toggle("selected");
+
+        let selected = document.querySelectorAll(".seats button.selected");
+        let names = [];
+
+        selected.forEach(function(item) {
+            names.push(item.innerText);
+        });
+
+        if (seatInput) {
+            seatInput.value = names.join(", ");
+        }
+
+        if (total) {
+            total.innerText = "Total Price: Tk " + (names.length * 300);
         }
 
     });
-}
+
+});
+```
+
+});

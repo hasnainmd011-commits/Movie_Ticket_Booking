@@ -2,7 +2,7 @@
 
 <html>
 <head>
-    <title>MovieBook</title>
+    <title>Select Movie - MovieBook</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -23,14 +23,8 @@
 <div class="container">
 
 ```
-<h2>Welcome to MovieBook</h2>
-<p>Book your favourite movie tickets easily.</p>
-
-<h2>Now Showing</h2>
-
-<div class="search-box">
-    <input type="text" id="search" placeholder="Search movie...">
-</div>
+<h2>Select a Movie</h2>
+<p>Choose a movie to continue booking.</p>
 
 <div class="movies">
 
@@ -38,36 +32,34 @@
         <img src="images/avatar.jpg" alt="Avatar">
         <h3>Avatar</h3>
         <p>Action • Sci-Fi</p>
-        <a href="booking.php?movie=Avatar" class="btn">Book Now</a>
+        <a href="booking.php?movie=Avatar" class="btn">Select</a>
     </div>
 
     <div class="movie-card">
         <img src="images/deadpool.jpg" alt="Deadpool">
         <h3>Deadpool</h3>
         <p>Action • Comedy</p>
-        <a href="booking.php?movie=Deadpool" class="btn">Book Now</a>
+        <a href="booking.php?movie=Deadpool" class="btn">Select</a>
     </div>
 
     <div class="movie-card">
         <img src="images/moana2.jpg" alt="Moana 2">
         <h3>Moana 2</h3>
         <p>Animation • Adventure</p>
-        <a href="booking.php?movie=Moana%202" class="btn">Book Now</a>
+        <a href="booking.php?movie=Moana%202" class="btn">Select</a>
     </div>
 
     <div class="movie-card">
         <img src="images/mission.jpg" alt="Mission Impossible">
         <h3>Mission: Impossible</h3>
         <p>Action • Thriller</p>
-        <a href="booking.php?movie=Mission%3A%20Impossible" class="btn">Book Now</a>
+        <a href="booking.php?movie=Mission%3A%20Impossible" class="btn">Select</a>
     </div>
 
 </div>
 ```
 
 </div>
-
-<script src="js/script.js"></script>
 
 </body>
 </html>

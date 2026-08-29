@@ -1,4 +1,5 @@
-<?php
+
+<?php $movie = $_GET['movie'] ?? ''; ?>
 
 include "includes/db.php";
 
