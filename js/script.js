@@ -25,3 +25,25 @@ seats.forEach(function(seat) {
     });
 
 });
+
+let search = document.querySelector("#search");
+
+if (search) {
+    search.addEventListener("keyup", function() {
+
+        let movies = document.querySelectorAll(".movie");
+
+        movies.forEach(function(movie) {
+
+            let title = movie.querySelector("h3").innerText.toLowerCase();
+
+            if (title.includes(search.value.toLowerCase())) {
+                movie.style.display = "block";
+            } else {
+                movie.style.display = "none";
+            }
+
+        });
+
+    });
+}

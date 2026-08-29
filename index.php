@@ -29,25 +29,30 @@ $result = mysqli_query($conn, "SELECT * FROM movies");
 
 <h2>Now Showing</h2>
 
+<input type="text" id="search" placeholder="Search movies...">
 <?php while ($movie = mysqli_fetch_assoc($result)) { ?>
 
-<div>
-    <h3><?php echo $movie['title']; ?></h3>
+    <div class="movie">
 
-    <p><?php echo $movie['genre']; ?></p>
+        <h3><?php echo $movie['title']; ?></h3>
 
-    <p>
-        Duration: <?php echo $movie['duration']; ?>
-        |
-        Rating: <?php echo $movie['rating']; ?>
-    </p>
+        <p><?php echo $movie['genre']; ?></p>
 
-    <a href="booking.html?movie=<?php echo urlencode($movie['title']); ?>">
-        Book Now
-    </a>
-</div>
+        <p>
+            Duration: <?php echo $movie['duration']; ?>
+            |
+            Rating: <?php echo $movie['rating']; ?>
+        </p>
+
+        <a href="booking.php?movie=<?php echo urlencode($movie['title']); ?>">
+            Book Now
+        </a>
+
+    </div>
 
 <?php } ?>
+
+
 
 </body>
 </html>
